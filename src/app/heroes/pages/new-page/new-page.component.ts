@@ -61,21 +61,23 @@ export class NewHeroePageComponent implements OnInit{
 
   onSubmit(): void {
 
-    if(this.newHeroForm.invalid) return;
+    if ( this.newHeroForm.invalid ) return;
 
-    if(this.currentHero.id){
-      this.heroesService.updateHero(this.currentHero).subscribe(hero => {
-        //TODO: Mostrar snackbar
-        this.showSnackbar(`${hero.superhero} ha sido actualizado`);
-      });
+    if ( this.currentHero.id ) {
+      this.heroesService.updateHero( this.currentHero )
+        .subscribe( hero => {
+          this.showSnackbar(`${ hero.superhero } updated!`);
+        });
+
       return;
     }
 
-    this.heroesService.addHero(this.currentHero).subscribe( hero=> {
-      //TODO: mostrar snackbar, y redirigir a /heroes/edit/hero.id
-      this.router.navigate(['/heroes/edit', hero.id]);
-      this.showSnackbar(`${hero.superhero} ha sido creado`);
-    })
+    this.heroesService.addHero( this.currentHero )
+      .subscribe( hero => {
+        // TODO: mostrar snackbar, y navegar a /heroes/edit/ hero.id
+        this.router.navigate(['/heroes/edit', hero.id ]);
+        this.showSnackbar(`${ hero.superhero } created!`);
+      });
   }
 
   onDeleteHero(): void {
