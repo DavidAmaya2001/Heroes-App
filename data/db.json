@@ -167,6 +167,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "lHhmuaF",
+      "superhero": "Duende Verde",
+      "publisher": "DC Comics",
+      "alter_ego": "osborn",
+      "first_appearance": "Spiderman",
+      "characters": "Duende",
+      "alt_img": ""
     }
   ]
 }

@@ -1,1 +1,10 @@
-<p>confirm-dialog works!</p>
+<h1 mat-dialog-title>¿Esta seguro que desea eliminar este elemento?</h1>
+<div mat-dialog-content>
+  <p>Este proceso es irreversible</p>
+  <p>Desea eliminar a {{data.superhero}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="onConfirm()" cdkFocusInitial>Eliminar</button>
+</div>
